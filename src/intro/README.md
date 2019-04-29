@@ -1,0 +1,15 @@
+# Mobx
+
+- Simple, scalable state management
+- A battle tested library
+- transparently applying functional reactive programming (TFRP).
+
+**The philosophy behind MobX is very simple:**
+
+`Anything that can be derived from the application state, should be derived. Automatically.`
+
+which includes the UI, data serialization, server communication, etc.
+
+---
+
+## few core concepts

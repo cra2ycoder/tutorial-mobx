@@ -82,3 +82,23 @@ yarn install
 ```
 
 ---
+
+## install dev tools for mobx
+
+- adding this package as `devDependencies` in `package.json`
+
+```js
+{
+  "devDependencies": {
+    "mobx-react-devtools": "6.1.1"
+  },
+}
+```
+
+- then, run the following command for installing
+
+```
+yarn install
+```
+
+---
