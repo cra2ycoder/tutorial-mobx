@@ -83,7 +83,7 @@ class Container {
   }
 }
 
-decorate({
+decorate(Container, {
     list: observable
     whenNewItemAddedToList: computed
 })
@@ -100,7 +100,3 @@ decorate({
 ---
 
 ## Custom reactions
-
-```
-
-```
