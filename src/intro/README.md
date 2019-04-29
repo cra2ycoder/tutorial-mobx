@@ -34,9 +34,11 @@ which includes the UI, data serialization, server communication, etc.
 
   ```js
   import { observable } from 'mobx'
+
   class Container {
     count = 0
   }
+
   decorate(Container, {
     count: observable,
   })
