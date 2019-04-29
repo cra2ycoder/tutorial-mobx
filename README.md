@@ -62,11 +62,11 @@ yarn install
 
 ## install core mobx
 
-- adding this package as `dependencies` in `package.json` file as this required only for development purpose
+- adding this package as `dependencies` in `package.json`
 
 ```js
 {
-  "devDependencies": {
+  "dependencies": {
     // core mobx features
     "mobx": "5.9.4",
     // for react specific
