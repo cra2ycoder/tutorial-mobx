@@ -25,7 +25,7 @@ git clone https://cra2ycoder@github.com/cra2ycoder/my-js-react-app.git
 ```js
 {
   "devDependencies": {
-    // core support
+    // for transpiling the mobx decorators
     "@babel/plugin-proposal-decorators": "7.4.4"
   },
 }
