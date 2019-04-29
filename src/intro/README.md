@@ -18,35 +18,76 @@ which includes the UI, data serialization, server communication, etc.
 
 - its used to make the property to be observable, like act as a `variables`
 - support all values, `number, boolean, string, object and arrays`
-- usage:
 
-  - with decorators
+**usage:**
 
-  ```js
-  import { observable } from 'mobx'
+- with decorators
 
-  class Container {
-    @observable count = 0
-  }
-  ```
+```js
+import { observable } from 'mobx'
 
-  - without decorators
+class Container {
+  @observable count = 0
+}
+```
 
-  ```js
-  import { observable } from 'mobx'
+- without decorators
 
-  class Container {
-    count = 0
-  }
+```js
+import { observable, decorate } from 'mobx'
 
-  decorate(Container, {
-    count: observable,
-  })
-  ```
+class Container {
+  count = 0
+}
+
+decorate(Container, {
+  count: observable,
+})
+```
 
 ---
 
 ## Computed values
+
+- when the data gets modified, computed will be triggered the function automatically
+- `computed` can be either any getter/setter:
+  - `set`: function will be triggered while writing
+  - `get`: function will be triggered while getting
+
+**usage:**
+
+- with decorators
+
+```js
+import { observable, computed } from 'mobx'
+
+class Container {
+  @observable list = []
+
+  @computed get whenNewItemAddedToList() {
+    return list.length
+  }
+}
+```
+
+- without decorators
+
+```js
+import { observable, computed, decorate } from 'mobx'
+
+class Container {
+  list = []
+
+  get whenNewItemAddedToList() {
+    return list.length
+  }
+}
+
+decorate({
+    list: observable
+    whenNewItemAddedToList: computed
+})
+```
 
 ---
 
@@ -59,3 +100,7 @@ which includes the UI, data serialization, server communication, etc.
 ---
 
 ## Custom reactions
+
+```
+
+```
