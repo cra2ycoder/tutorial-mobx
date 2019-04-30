@@ -20,4 +20,4 @@ git clone https://cra2ycoder@github.com/cra2ycoder/my-js-react-mobx-app.git
 
 # Tutorial Pieces
 
-- [Intro]
+- [Intro]()
