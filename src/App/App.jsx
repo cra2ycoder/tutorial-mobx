@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import '../intro'
+
 class App extends React.Component {
   static defaultProps = {}
   render() {
@@ -8,6 +9,8 @@ class App extends React.Component {
       <>
         <div>Hello, Welcome!</div>
         <div>My First React App</div>
+        <br />
+        <hr />
       </>
     )
   }

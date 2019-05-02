@@ -19,3 +19,7 @@ which includes the UI, data serialization, server communication, etc.
 - [Reactions]()
 - [React Components]()
 - [Custom reactions]()
+
+**NOTE**
+
+- Mobx doesnot support `Function Component` only works with `React Components` which is **class** specific. Since, it would require component lifecycle method to update the component

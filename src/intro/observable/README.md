@@ -7,7 +7,7 @@
 
 - with decorators
 
-```js
+```jsx
 import { observable } from 'mobx'
 
 class Container {
@@ -17,7 +17,7 @@ class Container {
 
 - without decorators
 
-```js
+```jsx
 import { observable, decorate } from 'mobx'
 
 class Container {
@@ -27,4 +27,19 @@ class Container {
 decorate(Container, {
   count: observable,
 })
+```
+
+- using react component
+
+```jsx
+import React from 'react'
+import { observable } from 'mobx'
+
+class Counter extends React.Component {
+  @observable count = 0
+
+  render() {
+    return <div>{this.count}</div>
+  }
+}
 ```
