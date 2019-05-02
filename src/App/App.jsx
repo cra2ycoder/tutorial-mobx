@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import DevTools from 'mobx-react-devtools'
 import '../intro'
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
         <div>My First React App</div>
         <br />
         <hr />
+        <DevTools />
       </>
     )
   }
