@@ -67,6 +67,10 @@ class Container {
   @computed get whenNewItemAddedToList() {
     return list.length
   }
+
+  @computed set addNewItemToList(item) {
+    this.list.push(item)
+  }
 }
 ```
 
@@ -81,11 +85,16 @@ class Container {
   get whenNewItemAddedToList() {
     return list.length
   }
+
+  set addNewItemToList(item) {
+    this.list.push(item)
+  }
 }
 
 decorate(Container, {
     list: observable
     whenNewItemAddedToList: computed
+    addNewItemToList: computed
 })
 ```
 
