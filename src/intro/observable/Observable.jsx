@@ -25,7 +25,7 @@ class Counter extends React.Component {
   render() {
     return (
       <>
-        <h3>Counter (React.Component + Decorator)</h3>
+        <h3>observable:</h3>
         <div>count: {counterStore.count}</div>
         <button onClick={this.doIncrement}>+</button>
         <button onClick={this.doDecrement}>-</button>

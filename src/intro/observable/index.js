@@ -1,14 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Counter } from './WODComponent'
-import { Counter as WDCounter } from './WDComponent'
-import { Counter as WDICounter } from './WDIComponent'
+import { Counter } from './Observable'
 
-ReactDOM.render(
-  <>
-    <Counter />
-    <WDCounter />
-    <WDICounter />
-  </>,
-  document.getElementById('observable')
-)
+ReactDOM.render(<Counter />, document.getElementById('observable'))
