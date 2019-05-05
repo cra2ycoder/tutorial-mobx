@@ -16,15 +16,16 @@
 ```js
 import { observable, computed } from 'mobx'
 
-class BirdStore {
-  @observable birdList = []
+class Maths {
+  @observable a = 0
+  @observable b = 0
 
-  @computed get getBirds() {
-    return this.birdList.join(',')
+  @computed get add() {
+    return this.a + this.b
   }
 
-  setBirds(newBird) {
-    this.birdList.push(newBird)
+  @computed get subtract() {
+    return this.a - this.b
   }
 }
 ```
@@ -34,20 +35,23 @@ class BirdStore {
 ```js
 import { observable, computed, decorate } from 'mobx'
 
-class BirdStore {
-  birdList = []
+class Maths {
+  a = 0
+  b = 0
 
-  get getBirds() {
-    return birdList.length
+  get add() {
+    return this.a + this.b
   }
 
-  setBirds(newBird) {
-    this.birdList.push(newBird)
+  get subtract() {
+    return this.a - this.b
   }
 }
 
-decorate(BirdStore, {
-    birdList: observable
-    getBirds: computed
+decorate(Maths, {
+  a: observable,
+  b: observable,
+  add: computed,
+  subtract: computed,
 })
 ```

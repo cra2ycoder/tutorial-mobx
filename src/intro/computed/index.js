@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BirdShop } from './WDComponent'
+import { Calculator } from './WDComponent'
 import { Calculator as WDICalculator } from './WDIComponent'
-import { Calculator } from './WODComponent'
+import { Calculator as WODCalculator } from './WODComponent'
 
 ReactDOM.render(
   <>
-    <BirdShop />
+    <Calculator />
     <hr />
     <WDICalculator />
     <hr />
-    <Calculator />
+    <WODCalculator />
   </>,
   document.getElementById('computed')
 )

@@ -2,41 +2,51 @@ import React, { createRef } from 'react'
 import { observable, computed } from 'mobx'
 import { observer } from 'mobx-react'
 
-class BirdStore {
-  @observable birdsList = []
+class Maths {
+  @observable a = 0
+  @observable b = 0
 
-  @computed get getBirds() {
-    return this.birdsList.join(',')
+  @computed get add() {
+    return this.a + this.b
   }
 
-  setBirds(bird) {
-    this.birdsList.push(bird)
+  @computed get subtract() {
+    return this.a - this.b
   }
 }
 
 @observer
-class BirdShop extends React.Component {
+class Calculator extends React.Component {
   constructor(props) {
     super(props)
-
-    this.textInput = createRef()
+    this.firstInput = createRef()
+    this.secondInput = createRef()
   }
 
   handleClick = e => {
     e.preventDefault()
-    const birdName = this.textInput.current.value
-    birdStore.setBirds(birdName)
+    console.log(mathObj)
+    mathObj.a = +this.firstInput.current.value
+    mathObj.b = +this.secondInput.current.value
   }
 
   render() {
     return (
       <>
-        <div>Total Birds: {birdStore.birdsList.length}</div>
-        <div>Birds: {birdStore.getBirds}</div>
+        <h1>Calculator</h1>
+        <br />
         <form>
-          <input placeholder="enter your bird name!" ref={this.textInput} />
-          <button onClick={this.handleClick}>ADD</button>
+          <input placeholder="enter your first number" ref={this.firstInput} />
+          <input
+            placeholder="enter your second number"
+            ref={this.secondInput}
+          />
+          <button onClick={this.handleClick}>Calculate</button>
         </form>
+        <div>
+          <div>Addition: {mathObj.add}</div>
+          <div>Subtraction: {mathObj.subtract}</div>
+        </div>
       </>
     )
   }
@@ -45,7 +55,7 @@ class BirdShop extends React.Component {
 /**
  * object creation
  */
-const birdStore = new BirdStore()
+const mathObj = new Maths()
 
-export { BirdShop, birdStore }
-export default BirdShop
+export { Calculator, Maths, mathObj }
+export default Calculator
