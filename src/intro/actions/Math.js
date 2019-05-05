@@ -7,7 +7,16 @@ class Math {
 
   @action
   add() {
+    console.log(this)
     const res = this.a + this.b
+    this.result = res
+    console.log(`res: ${res}`)
+  }
+
+  @action.bound
+  subtract() {
+    console.log(this)
+    const res = this.a - this.b
     this.result = res
     console.log(`res: ${res}`)
   }

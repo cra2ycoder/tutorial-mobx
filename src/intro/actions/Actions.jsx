@@ -10,7 +10,7 @@ class Actions extends React.Component {
     this.secondInput = createRef()
   }
 
-  handleClick = e => {
+  addNumber = e => {
     e.preventDefault()
     math.a = +this.firstInput.current.value
     math.b = +this.secondInput.current.value
@@ -22,13 +22,14 @@ class Actions extends React.Component {
       <>
         <h1>Actions:</h1>
         <br />
-        <form>
+        <form onClick={e => e.preventDefault()}>
           <input placeholder="enter your first number" ref={this.firstInput} />
           <input
             placeholder="enter your second number"
             ref={this.secondInput}
           />
-          <button onClick={this.handleClick}>Add</button>
+          <button onClick={this.addNumber}>Add</button>
+          <button onClick={math.subtract}>Subtract</button>
         </form>
         <div>Result: {math.result}</div>
       </>
