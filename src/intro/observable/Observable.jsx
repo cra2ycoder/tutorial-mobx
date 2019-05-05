@@ -1,10 +1,6 @@
 import React from 'react'
-import { observable } from 'mobx'
 import { observer } from 'mobx-react'
-
-class CounterStore {
-  @observable count = 0
-}
+import { counterStore } from './CounterStore'
 
 @observer
 class Counter extends React.Component {
@@ -34,7 +30,5 @@ class Counter extends React.Component {
   }
 }
 
-const counterStore = new CounterStore()
-
-export { Counter, counterStore }
+export { Counter }
 export default Counter
