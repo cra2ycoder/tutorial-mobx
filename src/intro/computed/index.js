@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BirdShop } from './WDComponent'
-import { BirdShop as WDIBirdShop } from './WDIComponent'
+import { Calculator as WDICalculator } from './WDIComponent'
 import { Calculator } from './WODComponent'
 
 ReactDOM.render(
   <>
     <BirdShop />
     <hr />
-    <WDIBirdShop />
+    <WDICalculator />
     <hr />
     <Calculator />
   </>,

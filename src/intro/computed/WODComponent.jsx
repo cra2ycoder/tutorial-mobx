@@ -13,14 +13,6 @@ class Maths {
   get subtract() {
     return this.a - this.b
   }
-
-  get multiply() {
-    return this.a * this.b
-  }
-
-  get divide() {
-    return this.a / this.b
-  }
 }
 
 class Calculator extends React.Component {
@@ -33,8 +25,8 @@ class Calculator extends React.Component {
 
   handleClick = e => {
     e.preventDefault()
-    const a = this.firstInput.current.value
-    const b = this.secondInput.current.value
+    const a = +this.firstInput.current.value
+    const b = +this.secondInput.current.value
 
     math.a = a
     math.b = b
@@ -56,8 +48,6 @@ class Calculator extends React.Component {
         <div>
           <div>Addition: {math.add}</div>
           <div>Subtraction: {math.subtract}</div>
-          <div>Multiplication: {math.multiply}</div>
-          <div>Division: {math.divide}</div>
         </div>
       </>
     )
@@ -72,8 +62,6 @@ decorate(Maths, {
   b: observable,
   add: computed,
   subtract: computed,
-  multiply: computed,
-  divide: computed,
 })
 
 // making the component to be observed
