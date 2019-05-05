@@ -1,2 +1,10 @@
 import React from 'react'
-import { observable, computed, decorate } from 'mobx'
+import ReactDOM from 'react-dom'
+import { BirdShop } from './WDComponent'
+
+ReactDOM.render(
+  <>
+    <BirdShop />
+  </>,
+  document.getElementById('computed')
+)
