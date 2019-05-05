@@ -1,19 +1,6 @@
 import React, { createRef } from 'react'
-import { observable, computed } from 'mobx'
 import { observer } from 'mobx-react'
-
-class Maths {
-  @observable a = 0
-  @observable b = 0
-
-  @computed get add() {
-    return this.a + this.b
-  }
-
-  @computed get subtract() {
-    return this.a - this.b
-  }
-}
+import { math } from './Maths'
 
 @observer
 class Calculator extends React.Component {
@@ -25,9 +12,8 @@ class Calculator extends React.Component {
 
   handleClick = e => {
     e.preventDefault()
-    console.log(mathObj)
-    mathObj.a = +this.firstInput.current.value
-    mathObj.b = +this.secondInput.current.value
+    math.a = +this.firstInput.current.value
+    math.b = +this.secondInput.current.value
   }
 
   render() {
@@ -44,18 +30,13 @@ class Calculator extends React.Component {
           <button onClick={this.handleClick}>Calculate</button>
         </form>
         <div>
-          <div>Addition: {mathObj.add}</div>
-          <div>Subtraction: {mathObj.subtract}</div>
+          <div>Addition: {math.add}</div>
+          <div>Subtraction: {math.subtract}</div>
         </div>
       </>
     )
   }
 }
 
-/**
- * object creation
- */
-const mathObj = new Maths()
-
-export { Calculator, Maths, mathObj }
+export { Calculator }
 export default Calculator
