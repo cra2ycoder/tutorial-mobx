@@ -1,7 +1,6 @@
 ## Computed values
 
-- when the data gets modified, computed will be triggered the function automatically
-  best example is `google spread sheet`
+- when the data gets modified, computed will be triggered the function automatically. Best example is `google spread sheet`
 
   - ![](https://cra2ycoder.sirv.com/tutorial-mobx/computed_mobx.gif)
 
