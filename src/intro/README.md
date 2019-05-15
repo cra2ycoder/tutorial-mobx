@@ -14,11 +14,9 @@ which includes the UI, data serialization, server communication, etc.
 
 # few core concepts
 
-- [Observable State](https://egghead.io/lessons/react-sync-the-ui-with-the-app-state-using-mobx-observable-and-observer-in-react)
-- [Computed Values]()
-- [Reactions]()
-- [React Components]()
-- [Custom reactions]()
+- [@observable](https://egghead.io/lessons/react-sync-the-ui-with-the-app-state-using-mobx-observable-and-observer-in-react)
+- [@computed](https://mobx.js.org/refguide/computed-decorator.html)
+- [@action + @action.bound](https://mobx.js.org/refguide/action.html)
 
 **NOTE**
 
