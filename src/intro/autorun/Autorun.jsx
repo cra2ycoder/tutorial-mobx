@@ -1,4 +1,5 @@
 import React from 'react'
+import { observable, autorun } from 'mobx'
 
 class Autorun extends React.Component {
   render() {

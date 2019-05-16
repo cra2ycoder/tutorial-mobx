@@ -6,19 +6,21 @@
 
 ## Two types
 
-- **action**
+**action**
 
-  - for plain functions
-  - which is not depend on any target object
+- for plain functions
+- which is not depend on any target object
 
 ```jsx
 <button onClick={() => math.subtract()}>Add</button>
 ```
 
-- **action.bound**
+---
 
-  - to use with target object
-  - mainly used when required handle with handler elements
+**action.bound**
+
+- to use with target object
+- mainly used when required handle with handler elements
 
 ```jsx
 <button onClick={math.subtract}>Subtract</button>
